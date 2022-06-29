@@ -61,7 +61,7 @@ public class LaPaz implements ICiudad {
     }
 
     public void showInfo(){
-        System.out.println("<<< INFORMACION DE LA CIUDAD DE LA PAZ >>>");
+        System.out.println(">>> Info de LaPaz");
         System.out.println("Nombre: " + nombre);
         System.out.println("Numero de provincias: " + provincias);
         System.out.println("Numero de habitantes: " + habitantes);

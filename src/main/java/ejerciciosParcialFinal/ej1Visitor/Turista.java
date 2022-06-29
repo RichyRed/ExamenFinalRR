@@ -39,50 +39,47 @@ public class Turista implements ITurista {
 
     @Override
     public void viajarLP(LaPaz laPaz) {
-        // Para la ciudad de la paz un gasto de una cantidad
-        // randomica
-        System.out.println("VISITANDO LA CIUDAD DE LA PAZ");
+        System.out.println("Se visito La Paz");
         int monto = new Random().nextInt(50);
         if (montoDinero > monto){
             montoDinero = montoDinero - monto;
-            System.out.println("Turista ---> Gastando " + monto + " Bs, saldo: " + montoDinero);
+            System.out.println("Turista > Gastando " + monto + " Bs, saldo: " + montoDinero);
             double recibirMonto = laPaz.getDineroTurismo() + monto;
             laPaz.setDineroTurismo(recibirMonto);
             laPaz.showInfo();
         } else {
-            System.out.println("Dinero insuficiente, no puede gastar en la ciudad de La Paz");
+            System.out.println("Dinero no alcanza, no puede gastar en La Paz");
         }
     }
 
     @Override
     public void viajarCBBA(Cochabamba cochabamba) {
         //  Para cochabamba se desea gastar el 10% del total de su número de habitantes
-        System.out.println("VISITANDO LA CIUDAD DE COCHABAMBA");
+        System.out.println("Se visito la ciudad de CBBA");
         double monto = cochabamba.getHabitantes()*0.1;
         if (montoDinero > monto){
             montoDinero = montoDinero - monto;
-            System.out.println("Turista ---> Gastando " + monto + " Bs, saldo: " + montoDinero);
+            System.out.println("Turista > Gastando " + monto + " Bs, saldo: " + montoDinero);
             double recibirMonto = cochabamba.getDineroTurismo() + monto;
             cochabamba.setDineroTurismo(recibirMonto);
             cochabamba.showInfo();
         } else {
-            System.out.println("Dinero insuficiente, no puede gastar en la ciudad de Cochabamba");
+            System.out.println("Dinero no alcanza, no se puede gastar en Cochabamba");
         }
     }
 
     @Override
     public void viajarSCZ(SantaCruz santaCruz) {
-        // En santa cruz gasta una cantidad igual al 50% de su número de provincias.
-        System.out.println("VISITANDO LA CIUDAD DE SANTA CRUZ");
+        System.out.println("Se visito la ciudad de Santa Cru");
         double monto = santaCruz.getProvincias()*0.5;
         if (montoDinero > monto){
             montoDinero = montoDinero - monto;
-            System.out.println("Turista ---> Gastando " + monto + " Bs, saldo: " + montoDinero);
+            System.out.println("Turista > Gastando " + monto + " Bs, saldo: " + montoDinero);
             double recibirMonto = santaCruz.getDineroTurismo() + monto;
             santaCruz.setDineroTurismo(recibirMonto);
             santaCruz.showInfo();
         } else {
-            System.out.println("Dinero insuficiente, no puede gastar en la ciudad de Santa Cruz");
+            System.out.println("Dinero no alcanza, no puede gastar en Santa Cruz");
         }
     }
 }

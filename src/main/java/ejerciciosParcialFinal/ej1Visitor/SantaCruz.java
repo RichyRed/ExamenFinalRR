@@ -61,7 +61,7 @@ public class SantaCruz implements ICiudad {
     }
 
     public void showInfo(){
-        System.out.println("<<< INFORMACION DE LA CIUDAD DE SANTA CRUZ >>>");
+        System.out.println(">>> Info de Santa Cruz");
         System.out.println("Nombre: " + nombre);
         System.out.println("Numero de provincias: " + provincias);
         System.out.println("Numero de habitantes: " + habitantes);

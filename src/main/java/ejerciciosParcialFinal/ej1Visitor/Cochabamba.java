@@ -61,7 +61,7 @@ public class Cochabamba implements ICiudad {
     }
 
     public void showInfo(){
-        System.out.println("<<< INFORMACION DE LA CIUDAD DE COCHABAMBA >>>");
+        System.out.println(">>> Info de CBBA");
         System.out.println("Nombre: " + nombre);
         System.out.println("Numero de provincias: " + provincias);
         System.out.println("Numero de habitantes: " + habitantes);
