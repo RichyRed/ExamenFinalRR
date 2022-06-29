@@ -1,15 +1,14 @@
 package ejerciciosParcialFinal.ej1Visitor;
 
-public class Cochabamba implements ICiudad{
+public class Cochabamba implements ICiudad {
     private String nombre;
     private int provincias;
     private int habitantes;
     private String clima;
     private double dineroTurismo;
 
-    public Cochabamba(String nombre, int provincias, int habitantes, String clima, double dineroTurismo) {
+    public Cochabamba(int provincias, int habitantes, String clima) {
         nombre = "Cochabamba";
-
         this.provincias = provincias;
         this.habitantes = habitantes;
         this.clima = clima;
@@ -57,7 +56,17 @@ public class Cochabamba implements ICiudad{
     }
 
     @Override
-    public void gastarDinero(Turista turista) {
+    public void gastarDinero(ITurista turista) {
+        turista.viajarCBBA(this);
+    }
 
+    public void showInfo(){
+        System.out.println("<<< INFORMACION DE LA CIUDAD DE COCHABAMBA >>>");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Numero de provincias: " + provincias);
+        System.out.println("Numero de habitantes: " + habitantes);
+        System.out.println("Clima: " + clima);
+        System.out.println("Dinero recibido por turismo: " + dineroTurismo);
+        System.out.println();
     }
 }
